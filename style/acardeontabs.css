@@ -1,0 +1,70 @@
+.acc-conntainer{
+    width: 49%;
+    margin: 0;
+    display: inline-block;
+
+}
+.acc-conntainer label{
+    padding: 12px 20px;
+    position: relative;
+    z-index: 20;
+    display: block;
+    cursor: pointer;
+    color: #777;
+    text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
+    line-height: 33px;
+    background: #ffffff;
+    background: -moz-linear-gradient(top, #ffffff 1%, #eaeaea 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#ffffff), color-stop(100%,#eaeaea));
+    background: -webkit-linear-gradient(top, #ffffff 1%,#eaeaea 100%);
+    background: -o-linear-gradient(top, #ffffff 1%,#eaeaea 100%);
+    background: -ms-linear-gradient(top, #ffffff 1%,#eaeaea 100%);
+    background: linear-gradient(top, #ffffff 1%,#eaeaea 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eaeaea',GradientType=0 );
+    box-shadow:
+            0px 0px 0px 1px rgba(155,155,155,0.3),
+            1px 0px 0px 0px rgba(255,255,255,0.9) inset,
+            0px 2px 2px rgba(0,0,0,0.1);
+}
+.acc-conntainer label:hover{
+    background-color: #fff;
+}
+.acc-conntainer input:checked + label,
+.acc-conntainer input:checked + label:hover{
+    background-color: #c6e1ec;
+    color: #3d7489;
+    text-shadow: 0px 1px 1px rgba(255,255,255, 0.6);
+    box-shadow:
+            0px 0px 0px 1px rgba(155,155,155,0.3),
+            0px 2px 2px rgba(0,0,0,0.1);
+}
+
+.acc-conntainer input{
+    display: none;
+}
+.acc-conntainer article{
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-top: -1px;
+    overflow: hidden;
+    height: 0px;
+    position: relative;
+    z-index: 10;
+    transition: height 0.3s ease-in-out, box-shadow 0.6s linear; /* Добавляем свойство с префиксами */
+}
+
+.acc-conntainer input:checked ~ article{
+    transition: height 0.5s ease-in-out, box-shadow 0.1s linear; /* Учитываем более старые браузеры, не забываем про префиксы */
+    box-shadow: 0px 0px 0px 1px rgba(155,155,155,0.3);
+}
+.acc-conntainer input:checked ~ article.acc-small{
+    height: auto;
+    padding: 20px;
+}
+.acc-conntainer input:checked ~ article.acc-medium{
+    height: auto ;
+    padding: 20px;
+}
+.acc-conntainer input:checked ~ article.acc-large{
+    height: auto;
+    padding: 20px;
+}
